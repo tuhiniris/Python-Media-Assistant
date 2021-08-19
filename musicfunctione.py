@@ -21,7 +21,7 @@ import glob
 from moviepy.editor import *
 import pygame
 from tkinter import *
-import tkSnack
+#import tkSnack
 from pymusicplayer import MusicPlayer
 
 def startup():
@@ -51,30 +51,30 @@ def voicemode(command):
     # Voice List
     player = "C:\Program Files (x86)\VideoLAN\VLC\vlc"
     voices = [
-    "K:/Nine AI/voices/audio1.mp3",    
-    "K:/Nine AI/voices/bored.mp3",
-    "K:/Nine AI/voices/camerasmile.mp3",
-    "K:/Nine AI/voices/canhelp.mp3",
-    "K:/Nine AI/voices/comment1.mp3",
-    "K:/Nine AI/voices/howyoudoin.mp3",
-    "K:/Nine AI/voices/random talks/r1.mp3",
-    "K:/Nine AI/voices/random talks/r2.mp3",
-    "K:/Nine AI/voices/random talks/r3.mp3",
-    "K:/Nine AI/voices/random talks/r4.mp3",
-    "K:/Nine AI/voices/random talks/r5.mp3",
-    "K:/Nine AI/voices/random talks/r6.mp3",
-    "K:/Nine AI/voices/random talks/r7.mp3",
-    "K:/Nine AI/voices/random talks/r8.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/audio1.mp3",    
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/bored.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/camerasmile.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/canhelp.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/comment1.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/howyoudoin.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r1.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r2.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r3.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r4.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r5.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r6.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r7.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r8.mp3",
     
     # MUSIC
-    "K:/Nine AI/voices/songs/Weero & Mitte - Our Dive (Radio Edit).mp3",
-    "K:/Nine AI/voices/songs/Unknown Brain - Why Do I_ (feat. Bri Tolani) [NCS Release].mp3",
-    "K:/Nine AI/voices/songs/Tobu - Return To The Wild [NCS Release].mp3",
-    "K:/Nine AI/voices/songs/Sinner's Heist - Streetlight People (feat. Harley Bird) [NCS Release].mp3",
-    "K:/Nine AI/voices/songs/Sekai - Running.mp3",
-    "K:/Nine AI/voices/songs/RetroVision - Cake [NCS Release].mp3",
-    "K:/Nine AI/voices/songs/Michael-White-ft.-Mylk---Venus--_NCS-Release_.mp3",
-    "K:/Nine AI/voices/audio1.mp3"
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Weero & Mitte - Our Dive (Radio Edit).mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Unknown Brain - Why Do I_ (feat. Bri Tolani) [NCS Release].mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Tobu - Return To The Wild [NCS Release].mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Sinner's Heist - Streetlight People (feat. Harley Bird) [NCS Release].mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Sekai - Running.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/RetroVision - Cake [NCS Release].mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Michael-White-ft.-Mylk---Venus--_NCS-Release_.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/audio1.mp3"
     ]
     
     # Process Controller
@@ -175,7 +175,7 @@ def voicecommands():
         with m as source: r.adjust_for_ambient_noise(source)
         player2 = "C:\Program Files (x86)\VideoLAN\VLC\vlc"
         try:    
-            subprocess.call([player2, "K:/Nine AI/voices/random talks/blip.mp3"],timeout = 1)
+            subprocess.call([player2, "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/blip.mp3"],timeout = 1)
                     
         except:
             pass
@@ -320,7 +320,7 @@ def googlequotes(unknowncommand):
     time.sleep(0.5) 
 
 def dino():
-    animation = pyglet.image.load_animation('K:/Nine AI/voices/simple.gif')
+    animation = pyglet.image.load_animation('D:/Event-MGMT-React/Python-Media-Assistant/voices/simple.gif')
     animSprite = pyglet.sprite.Sprite(animation)
     w = animSprite.width
     h = animSprite.height
@@ -390,14 +390,14 @@ def playsong(paths):
 	cleaner()
 
 def cleaner():
-    folder_path = 'K:/Nine AI/Music-Scraper'
+    folder_path = 'D:/Event-MGMT-React/Python-Media-Assistant/Music-Scraper'
     for file_name in os.listdir(folder_path):
         if file_name.endswith('.mp4'):
             os.remove(folder_path +"/"+ file_name)
     try:        
-        gpath = 'K:/Nine AI/voices/unknown.mp3'
+        gpath = 'D:/Event-MGMT-React/Python-Media-Assistant/voices/unknown.mp3'
         os.remove(gpath)
-        gpath = 'K:/Nine AI/voices/generic.mp3' 
+        gpath = 'D:/Event-MGMT-React/Python-Media-Assistant/voices/generic.mp3' 
         os.remove(gpath)
     except:
         pass
@@ -415,31 +415,31 @@ while(True):
 # Voice Files Directory
 
 '''
-    "K:/Nine AI/voices/audio1.mp3",
-    "K:/Nine AI/voices/bored.mp3",
-    "K:/Nine AI/voices/camerasmile.mp3",
-    "K:/Nine AI/voices/canhelp.mp3",
-    "K:/Nine AI/voices/comment1.mp3",
-    "K:/Nine AI/voices/howyoudoin.mp3",
-    "K:/Nine AI/voices/random talks/r1.mp3",
-    "K:/Nine AI/voices/random talks/r2.mp3",
-    "K:/Nine AI/voices/random talks/r3.mp3",
-    "K:/Nine AI/voices/random talks/r4.mp3",
-    "K:/Nine AI/voices/random talks/r5.mp3",
-    "K:/Nine AI/voices/random talks/r6.mp3",
-    "K:/Nine AI/voices/random talks/r7.mp3",
-    "K:/Nine AI/voices/random talks/r8.mp3"
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/audio1.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/bored.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/camerasmile.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/canhelp.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/comment1.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/howyoudoin.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r1.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r2.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r3.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r4.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r5.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r6.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r7.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/random talks/r8.mp3"
     
     MUSIC
     
-    "K:/Nine AI/voices/songs/Weero & Mitte - Our Dive (Radio Edit).mp3",
-    "K:/Nine AI/voices/songs/Unknown Brain - Why Do I_ (feat. Bri Tolani) [NCS Release].mp3",
-    "K:/Nine AI/voices/songs/Tobu - Return To The Wild [NCS Release].mp3",
-    "K:/Nine AI/voices/songs/Sinner's Heist - Streetlight People (feat. Harley Bird) [NCS Release].mp3",
-    "K:/Nine AI/voices/songs/Sekai - Running.mp3",
-    "K:/Nine AI/voices/songs/RetroVision - Cake [NCS Release].mp3",
-    "K:/Nine AI/voices/songs/Michael-White-ft.-Mylk---Venus--_NCS-Release_.mp3",
-    "K:/Nine AI/voices/audio1.mp3"   
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Weero & Mitte - Our Dive (Radio Edit).mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Unknown Brain - Why Do I_ (feat. Bri Tolani) [NCS Release].mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Tobu - Return To The Wild [NCS Release].mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Sinner's Heist - Streetlight People (feat. Harley Bird) [NCS Release].mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Sekai - Running.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/RetroVision - Cake [NCS Release].mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/songs/Michael-White-ft.-Mylk---Venus--_NCS-Release_.mp3",
+    "D:/Event-MGMT-React/Python-Media-Assistant/voices/audio1.mp3"   
     
     
 '''
